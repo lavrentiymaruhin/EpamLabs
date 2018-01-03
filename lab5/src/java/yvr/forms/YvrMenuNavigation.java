@@ -2,6 +2,7 @@ package yvr.forms;
 
 import framework.BaseForm;
 import framework.elements.Button;
+import framework.elements.Label;
 import framework.elements.TextBox;
 import org.openqa.selenium.By;
 
@@ -13,6 +14,9 @@ public class YvrMenuNavigation extends BaseForm {
     private Button flightsBtn = new Button(By.xpath("//a[@href='/en/passengers/flights']"));
     private Button arrivingFlightsBtn = new Button(By.xpath("//a[@href='/en/passengers/flights/arriving-flights']"));
     private Button departingFlightsBtn = new Button(By.xpath("//a[@href='/en/passengers/flights/departing-flights']"));
+    private Button changeLanguageBtn = new Button(By.xpath("//a[.='Français']"),"ChangeLanguageBtn");
+    private Label changeLanguageIndicator = new Label(By.xpath("//button[.='Arrivées']"),"ChangeLanguageIndicator");
+
     public YvrMenuNavigation() {
         super(By.xpath(formlocator), "home");
     }
@@ -38,10 +42,18 @@ public class YvrMenuNavigation extends BaseForm {
         searchButton.click();
     }
 
+    public void changeLanguage(){
+        changeLanguageBtn.click();
+    }
+
     public void goSearch(String text){
         inputSearch(text);
         buttonSearchClick();
 
+    }
+
+    public void assertChangeLanguage(){
+        assert(changeLanguageIndicator.isPresent());
     }
 
     public void goArrivingFlights(){

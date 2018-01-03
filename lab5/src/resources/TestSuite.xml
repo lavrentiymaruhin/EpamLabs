@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Steam Shop Test" verbose="1">
+    <parameter name="login"  value="testautomationuser"/>
+    <parameter name="password"  value="Time4Death!"/>
+    <test name="Functional Tests" preserve-order="true">
+        <classes>
+            <class name="yvr.GitAuthorizationTest" />
+        </classes>
+    </test>
+</suite>

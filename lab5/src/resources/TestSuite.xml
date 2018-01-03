@@ -4,7 +4,16 @@
     <parameter name="password"  value="Time4Death!"/>
     <test name="Functional Tests" preserve-order="true">
         <classes>
-            <class name="yvr.GitAuthorizationTest" />
+            <class name="yvr.YvrArrivingFlightActual" />
+            <class name="yvr.YvrArrivingFlightActual" />
+            <class name="yvr.YvrArrivingFlightActual" />
+            <class name="yvr.YvrArrivingFlightActual" />
+            <class name="yvr.YvrArrivingFlightActual" />
+            <class name="yvr.YvrArrivingFlightActual" />
+            <class name="yvr.YvrArrivingFlightActual" />
+            <class name="yvr.YvrArrivingFlightActual" />
+            <class name="yvr.YvrArrivingFlightActual" />
+            <class name="yvr.YvrArrivingFlightActual" />
         </classes>
     </test>
 </suite>

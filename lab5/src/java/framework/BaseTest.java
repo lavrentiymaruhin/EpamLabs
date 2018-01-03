@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public abstract class BaseTest extends BaseEntity{
 
-    public abstract void runTest();
+    public abstract void runTest() throws InterruptedException;
 
     @Test
     public void xTest() throws Throwable {

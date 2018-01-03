@@ -116,9 +116,13 @@ public abstract class BaseElement extends BaseEntity {
     }
 
 
-    /**
-     * Click on the item.
-     */
+    public void moveToElement(){
+        waitForIsElementPresent();
+        Actions action = new Actions( browser.getDriver());
+        action.moveToElement(element).build().perform();
+
+    }
+
     public void click() {
         waitForIsElementPresent();
         Actions action = new Actions( browser.getDriver());

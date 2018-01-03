@@ -14,7 +14,7 @@ public class TextBox extends BaseElement  {
     }
 
     protected String getElementType() {
-        return getLoc("loc.text.field");
+        return "TextBox";
     }
 
     public TextBox(final By locator) {

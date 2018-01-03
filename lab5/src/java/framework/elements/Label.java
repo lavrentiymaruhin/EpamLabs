@@ -17,6 +17,6 @@ public class Label extends BaseElement {
     }
 
     protected String getElementType() {
-        return getLoc("loc.label");
+        return "Label";
     }
 }

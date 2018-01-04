@@ -2,7 +2,6 @@ package yvr;
 
 import framework.ApplicationPropertis;
 import framework.BaseTest;
-import org.testng.Assert;
 import yvr.forms.YvrArrivingFlight;
 import yvr.forms.YvrMenuNavigation;
 

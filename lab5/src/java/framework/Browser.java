@@ -65,10 +65,8 @@ public final class Browser {
         }
     }
 
-    public void switchToFrame(By frame){
-
-        WebElement we = driver.findElement(frame);
-        driver.switchTo().frame(we);
+    public void switchToFrame(String id){
+        driver.switchTo().frame(id);
     }
 
     public void windowMaximise() {

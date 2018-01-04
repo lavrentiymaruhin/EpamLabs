@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="YVR Test" verbose="1">
-    <parameter name="login"  value="testautomationuser"/>
-    <parameter name="password"  value="Time4Death!"/>
+    <parameter name="Flight"  value="DL4685"/>
+    <parameter name="City"  value="Los Angeles"/>
+    <parameter name="Airport"  value="Minsk"/>
+    <parameter name="SearchSiteWord"  value="Business"/>
+    <parameter name="SearchShopName"  value="coast"/>
+    <parameter name="SelectCategoryHotels"  value="Hotels &amp; Conference Facilities"/>
+    <parameter name="SelectCategoryBank"  value="Banking &amp; Currency"/>
     <test name="Functional Tests" preserve-order="true">
         <classes>
             <class name="yvr.YvrArrivingFlightActual" />

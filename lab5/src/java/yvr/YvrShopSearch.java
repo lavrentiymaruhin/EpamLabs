@@ -7,10 +7,16 @@ import yvr.forms.YvrMenuNavigation;
 import yvr.forms.YvrShopDineServices;
 
 public class YvrShopSearch extends BaseTest {
-    public void runTest () {
+    public void runTest () throws InterruptedException {
         browser.navigate(ApplicationPropertis.getTestProperty("url"));
         YvrMenuNavigation ymn = new YvrMenuNavigation();
         ymn.buttonShopDineServicesFlightsClick();
         YvrShopDineServices ysds = new YvrShopDineServices();
+        ysds.buttonShopClick();
+        ysds.buttonTerminalCanadaClick();
+        ysds.inputSearch("coast");
+        ysds.buttonSecurityBeforeClick();
+        ysds.buttonSearchClick();
+        Thread.sleep(5000);
     }
 }

@@ -11,6 +11,9 @@ public class Button extends BaseElement {
         super(string, name);
     }
 
+    public Button(By locator) {
+        super(locator);
+    }
 
     protected String getElementType() {
         return "Button";
@@ -18,13 +21,5 @@ public class Button extends BaseElement {
 
     public boolean isEnabled(){
         return this.getElement().isEnabled();
-    }
-
-
-
-
-
-    public Button(By locator) {
-        super(locator);
     }
 }

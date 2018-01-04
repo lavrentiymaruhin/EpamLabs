@@ -11,5 +11,7 @@ public class YvrSiteSearch extends BaseTest {
         YvrMenuNavigation ymn = new YvrMenuNavigation();
         ymn.goSearch("Business");
         YvrSearchSite yss = new YvrSearchSite();
+        yss.assertSearchResult("Business");
+
     }
 }

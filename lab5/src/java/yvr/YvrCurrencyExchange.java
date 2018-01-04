@@ -11,6 +11,10 @@ public class YvrCurrencyExchange extends BaseTest {
         YvrMenuNavigation ymn = new YvrMenuNavigation();
         ymn.buttonShopDineServicesFlightsClick();
         YvrShopDineServices ysds = new YvrShopDineServices();
-
+        ysds.buttonServicesClick();
+        ysds.selectItemText("Banking & Currency");
+        ysds.buttonOpenNowClick();
+        ysds.buttonSecurityAfterClick();
+        ysds.buttonSearchClick();
     }
 }

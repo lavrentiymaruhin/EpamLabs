@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import java.lang.reflect.Field;
@@ -24,6 +25,7 @@ public abstract class BaseElement extends BaseEntity {
     protected String name;
     protected By locator;
     protected WebElement element;
+    protected Select select;
 
     public WebElement getElement() {
         waitForIsElementPresent();
@@ -133,7 +135,23 @@ public abstract class BaseElement extends BaseEntity {
         element.click();
     };
 
+    public void selectByValue(String value){
+        waitForIsElementPresent();
+        select = new Select(element);
+        select.selectByValue(value);
+    }
 
+    public void selectByText(String text){
+        waitForIsElementPresent();
+        select = new Select(element);
+        select.selectByVisibleText(text);
+    }
+
+    public void selectByIndex(int index){
+        waitForIsElementPresent();
+        select = new Select(element);
+        select.selectByIndex(index);
+    }
 
 
     public String getText() {

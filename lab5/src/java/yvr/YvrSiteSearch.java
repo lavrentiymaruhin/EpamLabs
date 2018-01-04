@@ -21,6 +21,5 @@ public class YvrSiteSearch extends BaseTest {
         ymn.goSearch(searchText);
         YvrSearchSite yss = new YvrSearchSite();
         yss.assertSearchResult(searchText);
-
     }
 }

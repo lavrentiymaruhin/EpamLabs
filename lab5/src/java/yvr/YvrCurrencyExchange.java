@@ -12,6 +12,7 @@ public class YvrCurrencyExchange extends BaseTest {
     public YvrCurrencyExchange(String bank) {
         this.bank = bank;
     }
+
     public void runTest () {
         browser.navigate(ApplicationPropertis.getTestProperty("url"));
         YvrMenuNavigation ymn = new YvrMenuNavigation();
@@ -22,5 +23,6 @@ public class YvrCurrencyExchange extends BaseTest {
         ysds.buttonOpenNowClick();
         ysds.buttonSecurityAfterClick();
         ysds.buttonSearchClick();
+        ysds.assertCurrencySearch(bank);
     }
 }

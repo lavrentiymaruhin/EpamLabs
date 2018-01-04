@@ -13,6 +13,10 @@ public class YvrFlightSchedules extends BaseForm {
     private Button airportSearchBtn = new Button(By.id("search-button"));
     private Label warningTextIdr = new Label(By.xpath("//span[.='Please choose a destination']"));
 
+    static {
+        Browser.getInstance().switchToFrame("ifrViewport");
+    }
+
     public void sendAirport(String text){
         airportTbx.click();
         airportTbx.type(text);

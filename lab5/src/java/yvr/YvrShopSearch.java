@@ -16,7 +16,7 @@ public class YvrShopSearch extends BaseTest {
         this.searchText = searchText;
     }
 
-    public void runTest () throws InterruptedException {
+    public void runTest (){
         browser.navigate(ApplicationPropertis.getTestProperty("url"));
         YvrMenuNavigation ymn = new YvrMenuNavigation();
         ymn.buttonShopDineServicesFlightsClick();
@@ -26,6 +26,6 @@ public class YvrShopSearch extends BaseTest {
         ysds.inputSearch(searchText);
         ysds.buttonSecurityBeforeClick();
         ysds.buttonSearchClick();
-        Thread.sleep(5000);
+        ysds.assertShopSearch();
     }
 }

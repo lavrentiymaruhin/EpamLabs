@@ -11,13 +11,20 @@ import org.openqa.selenium.By;
 
 public class YvrShopDineServices extends BaseForm {
     private static String formlocator="//body";
+
+
+    private Label openNowIdr = new Label(By.xpath("//strong[.='Open now']"),"ChangeLanguageBtn");
+    private Label categoryIdr = new Label(By.xpath("//div[@class='yvr-facility-list__subcategory yvr-facility-list__subcategory--LOC_PERSONAL_SERVICES']"));
+
+
+
     private Button shopBtn = new Button(By.xpath("//button[@data-target='shop']"));
     private Button servicesBtn = new Button(By.xpath("//button[@data-target='services']"));
     private Button terminalCanadaBtn = new Button(By.xpath("//label[@for='terminal-toggle-domestic']"));
     private Button securityBeforeBtn = new Button(By.xpath("//label[@for='security-toggle-shop']"));
     private Button securityAfterBtn = new Button(By.xpath("//label[@for='security-toggle-services']"));
     private Select selectCategory = new Select(By.xpath("//select[@class='yvr-form__select']"));
-    private Label openNowBtn = new Label(By.xpath("label[@for='yvr-form-opennow']"));
+    private Label openNowBtn = new Label(By.xpath("//label[@for='yvr-form-opennow']"));
     private Button searchBtn = new Button(By.xpath("//button[.='Filter']"));
     private TextBox searchTbx = new TextBox(By.xpath("//input[@id='yvr-facility-list-search']"));
 
@@ -53,6 +60,24 @@ public class YvrShopDineServices extends BaseForm {
     public void buttonSearchClick(){
         searchBtn.click();
     }
+
+    public void assertShopSearch(){
+
+    }
+
+    public void assertHotelSearch(String text){
+
+    }
+
+    public void assertCurrencySearch(String text){
+       assert(openNowIdr.isPresent());
+       if(categoryIdr.getText().equals(text)){
+           assert(true);
+       }else {
+           assert(false);
+       }
+    }
+
 
     public void inputSearch(String text){
 

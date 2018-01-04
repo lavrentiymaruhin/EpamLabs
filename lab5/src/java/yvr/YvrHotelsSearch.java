@@ -14,7 +14,7 @@ public class YvrHotelsSearch extends BaseTest {
         this.selectItem = selectItem;
     }
 
-    public void runTest () throws InterruptedException {
+    public void runTest (){
         browser.navigate(ApplicationPropertis.getTestProperty("url"));
         YvrMenuNavigation ymn = new YvrMenuNavigation();
         ymn.buttonShopDineServicesFlightsClick();
@@ -22,6 +22,6 @@ public class YvrHotelsSearch extends BaseTest {
         ysds.buttonServicesClick();
         ysds.selectItemText(selectItem);
         ysds.buttonSearchClick();
-        Thread.sleep(5000);
+        ysds.assertHotelSearch(selectItem);
     }
 }

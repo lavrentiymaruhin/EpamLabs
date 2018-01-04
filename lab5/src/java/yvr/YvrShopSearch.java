@@ -20,12 +20,13 @@ public class YvrShopSearch extends BaseTest {
         browser.navigate(ApplicationPropertis.getTestProperty("url"));
         YvrMenuNavigation ymn = new YvrMenuNavigation();
         ymn.buttonShopDineServicesFlightsClick();
+        browser.waitForPageToLoad();
         YvrShopDineServices ysds = new YvrShopDineServices();
         ysds.buttonShopClick();
         ysds.buttonTerminalCanadaClick();
         ysds.inputSearch(searchText);
         ysds.buttonSecurityBeforeClick();
         ysds.buttonSearchClick();
-        ysds.assertShopSearch();
+        ysds.assertShopSearch(searchText);
     }
 }

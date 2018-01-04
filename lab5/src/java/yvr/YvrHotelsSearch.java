@@ -18,6 +18,7 @@ public class YvrHotelsSearch extends BaseTest {
         browser.navigate(ApplicationPropertis.getTestProperty("url"));
         YvrMenuNavigation ymn = new YvrMenuNavigation();
         ymn.buttonShopDineServicesFlightsClick();
+        browser.waitForPageToLoad();
         YvrShopDineServices ysds = new YvrShopDineServices();
         ysds.buttonServicesClick();
         ysds.selectItemText(selectItem);

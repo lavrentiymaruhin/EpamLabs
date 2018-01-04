@@ -19,6 +19,7 @@ public class YvrSiteSearch extends BaseTest {
         browser.navigate(ApplicationPropertis.getTestProperty("url"));
         YvrMenuNavigation ymn = new YvrMenuNavigation();
         ymn.goSearch(searchText);
+        browser.waitForPageToLoad();
         YvrSearchSite yss = new YvrSearchSite();
         yss.assertSearchResult(searchText);
     }

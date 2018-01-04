@@ -10,6 +10,7 @@ public class YvrArrivingFlightActual extends BaseTest {
         browser.navigate(ApplicationPropertis.getTestProperty("url"));
         YvrMenuNavigation ymn = new YvrMenuNavigation();
         ymn.goArrivingFlights();
+        browser.waitForPageToLoad();
         YvrArrivingFlight yaf = new YvrArrivingFlight();
         yaf.assertPageName();
     }

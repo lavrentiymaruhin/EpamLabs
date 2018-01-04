@@ -17,6 +17,7 @@ public class YvrFlightSchedulesSearch extends BaseTest {
         browser.navigate(ApplicationPropertis.getTestProperty("url"));
         YvrMenuNavigation ymn = new YvrMenuNavigation();
         ymn.goFlightSchedules();
+        browser.waitForPageToLoad();
         YvrFlightSchedules yfs = new YvrFlightSchedules();
         yfs.goSearchFlights(airport);
         yfs.assertWarningMessage();

@@ -17,6 +17,7 @@ public class YvrDepartingFlightsSearch extends BaseTest {
         browser.navigate(ApplicationPropertis.getTestProperty("url"));
         YvrMenuNavigation ymn = new YvrMenuNavigation();
         ymn.goDepartingFlights();
+        browser.waitForPageToLoad();
         YvrDepartingFlights ydf = new YvrDepartingFlights();
         ydf.assertPageName();
         ydf.inputSearchTbx(flightsNumber);

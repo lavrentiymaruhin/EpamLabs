@@ -10,6 +10,7 @@ public class YvrDepartingFlightsActual extends BaseTest {
         browser.navigate(ApplicationPropertis.getTestProperty("url"));
         YvrMenuNavigation ymn = new YvrMenuNavigation();
         ymn.goDepartingFlights();
+        browser.waitForPageToLoad();
         YvrDepartingFlights ydf = new YvrDepartingFlights();
         ydf.assertPageName();
     }
